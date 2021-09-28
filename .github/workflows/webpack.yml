@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
-    
+
     steps:
     - uses: actions/checkout@v2
 
@@ -26,3 +26,4 @@ jobs:
       run: |
         npm install
         npx webpack
+        nx build dashboard
