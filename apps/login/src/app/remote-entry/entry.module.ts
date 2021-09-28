@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { RemoteEntryComponent } from './entry.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [RemoteEntryComponent],
   imports: [
-    BrowserModule,
+    CommonModule,
+    FormsModule,
     RouterModule.forChild([
       {
         path: '',
