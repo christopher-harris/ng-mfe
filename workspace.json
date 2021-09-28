@@ -4,6 +4,11 @@
     "dashboard": {
       "projectType": "application",
       "root": "apps/dashboard",
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "libs/ui/src/lib/styles"
+        ]
+      },
       "sourceRoot": "apps/dashboard/src",
       "prefix": "ng-mfe",
       "targets": {
@@ -137,6 +142,11 @@
     "login": {
       "projectType": "application",
       "root": "apps/login",
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "libs/ui/src/lib/styles"
+        ]
+      },
       "sourceRoot": "apps/login/src",
       "prefix": "ng-mfe",
       "targets": {
@@ -280,6 +290,28 @@
               "libs/shared/data-access-user/src/**/*.ts",
               "libs/shared/data-access-user/src/**/*.html"
             ]
+          }
+        }
+      }
+    },
+    "ui": {
+      "projectType": "library",
+      "root": "libs/ui",
+      "sourceRoot": "libs/ui/src",
+      "prefix": "ng-mfe",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui"],
+          "options": {
+            "jestConfig": "libs/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/ui/src/**/*.ts", "libs/ui/src/**/*.html"]
           }
         }
       }
