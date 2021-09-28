@@ -43,6 +43,9 @@
     },
     "shared-data-access-user": {
       "tags": []
+    },
+    "ui": {
+      "tags": []
     }
   }
 }

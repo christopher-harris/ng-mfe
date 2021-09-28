@@ -6,17 +6,20 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [RemoteEntryComponent],
+  declarations: [
+    RemoteEntryComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule.forChild([
       {
         path: '',
-        component: RemoteEntryComponent,
-      },
-    ]),
+        component: RemoteEntryComponent
+      }
+    ])
   ],
-  providers: [],
+  providers: []
 })
-export class RemoteEntryModule {}
+export class RemoteEntryModule {
+}
