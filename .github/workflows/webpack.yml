@@ -46,3 +46,9 @@ jobs:
           key: ${{ runner.os }}-build-node-modules-cache-${{ hashFiles('**/yarn.lock') }}
       - name: build affected
         run: yarn nx run-many --target=build --all
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: deploy_dist/dashboard
