@@ -45,4 +45,4 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-build-node-modules-cache-${{ hashFiles('**/yarn.lock') }}
       - name: build affected
-        run: yarn nx run affected:build --base=origin/master
+        run: yarn nx run-many --target=build --all
